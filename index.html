@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fab1fb57ab.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Inter:wght@100;200;300;400;500;600;700;800;900">
+    <link rel="stylesheet" type="txt/css" href="styles.css">
     <title>Encriptador</title>
 </head>
 <body>
@@ -12,31 +15,36 @@
     <main>
         <section class="section1">
             <div class="container-text-box">
-            <textarea name="" id="" cols="30" rows="10" class="box-text" placeholder="Ingrese el texto aquí"></textarea>
-        </div>
+                <textarea class="box-text" placeholder="Ingrese el texto aquí" id="texto"></textarea>
+            </div>
+            <div class="btn-alert">
         <div class="alert">
             <i class="fa-solid fa-circle-exclamation"></i>
             <p>Solo letras minusculas y sin acento</p>
         </div>
         <div class="container-buttons">
-            <input type="button" class="btn-encriptar" value="Encriptar">
-            <input type="button" class="btn-desencriptar" value="Desencriptar">
-        </div>
+            <button class="btn-encriptar" id="btn1">Encriptar</button>
+            <button class="btn-desencriptar" id="btn2">Desencriptar</button>
+        </div></div>
         </section>
         <section class="section2">
-            <img src="images/Muñeco.svg" alt="" class="">
-            <div class="container-paragraph">
+            <div class="container-paragraph-img">
+                <img  src="images/Muñeco.svg" alt="" class="">
                 <h3>Ningún mensaje fue <br> encontrado</h3>
                 <p>Ingresa el texto que desees encriptar o <br> desencriptar</p>
-            </div>
-            <div class="container-copy">
-                <input type="button" value="copiar" class="btn-copy">
             </div>
             <div class="container-result">
                 <p class="text-result"></p>
             </div>
+            <div class="container-copy">
+                <button class="btn-copy">Copiar</button>
+            </div>
+            
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <p>&copy; 2024 Chellenge Alura One by Daniela Garnica</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
