@@ -3,6 +3,12 @@
 document.getElementById('btn1').addEventListener('click', function() 
 { 
     var texto = document.getElementById('texto').value;
+    let regex = /^[a-z]+$/;
+    if (texto.trim() === '') {
+        alert("Debe ingresar algún texto");
+    } else if (!regex.test(texto)) {
+        alert("Solo se permiten letras minúsculas y sin acento."); 
+    } else {
     var textoEncriptado = encriptarTexto(texto);
     var resultado = document.getElementsByClassName('text-result')[0];
     resultado.innerHTML = textoEncriptado;
@@ -15,7 +21,7 @@ document.getElementById('btn1').addEventListener('click', function()
     let mostrarBtn = document.getElementsByClassName('container-copy')[0];
     mostrarBtn.style.display = "block";
 
-})
+    }})
 
 function encriptarTexto(texto) {
     texto = texto.replace(/e/g, 'enter');
@@ -31,6 +37,12 @@ function encriptarTexto(texto) {
 document.getElementById('btn2').addEventListener('click', function() 
 { 
     var textoAdesencriptar = document.getElementById('texto').value;
+    let regex = /^[a-z]+$/;
+    if (textoAdesencriptar.trim() === '') {
+        alert("Debe ingresar algún texto");
+    } else if (!regex.test(textoAdesencriptar)) {
+        alert("Solo se permiten letras minúsculas y sin acento."); 
+    } else {
     var textoDesencriptado = desencriptarTexto(textoAdesencriptar);
     var resultado = document.getElementsByClassName('text-result')[0];
     resultado.innerHTML = textoDesencriptado;
@@ -42,7 +54,7 @@ document.getElementById('btn2').addEventListener('click', function()
     document.getElementsByClassName('container-result')[0].style.display= 'block';
     let mostrarBtn = document.getElementsByClassName('container-copy')[0];
     mostrarBtn.style.display = "block";
-})
+    }})
 
 function desencriptarTexto(textoAdesencriptar) {
     textoAdesencriptar = textoAdesencriptar.replace(/enter/g, 'e');
