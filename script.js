@@ -65,7 +65,8 @@ function desencriptarTexto(textoAdesencriptar) {
     return textoAdesencriptar;
 }
 
-// boton copiar
+// boton copiar  
+//
 
 document.querySelector('.btn-copy').addEventListener('click', function() {
     var textToCopy = document.querySelector('.text-result').textContent;
