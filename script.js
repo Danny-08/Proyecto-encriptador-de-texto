@@ -3,7 +3,8 @@
 document.getElementById('btn1').addEventListener('click', function() 
 { 
     var texto = document.getElementById('texto').value;
-    let regex = /^[a-z]+(\s[a-z]+)*$/;
+    // let regex = /^[a-z]+(\s[a-z]+)*$/; no permite saltos de linea
+    let regex = /^[a-z]+(\s[a-z]+)*\s*$/;
     if (texto.trim() === '') {
         alert("Debe ingresar algún texto");
     } else if (!regex.test(texto)) {
@@ -37,7 +38,8 @@ function encriptarTexto(texto) {
 document.getElementById('btn2').addEventListener('click', function() 
 { 
     var textoAdesencriptar = document.getElementById('texto').value;
-    let regex = /^[a-z]+(\s[a-z]+)*$/;
+    let //regex = /^[a-z]+(\s[a-z]+)*$/; no permite saltos de linea 
+    let regex = /^[a-z]+(\s[a-z]+)*\s*$/;
     if (textoAdesencriptar.trim() === '') {
         alert("Debe ingresar algún texto");
     } else if (!regex.test(textoAdesencriptar)) {
